@@ -1,6 +1,6 @@
 import cv2
 
-image_file = "image/my_face.jpg"
+image_file = "image/face6.jpg"
 
 original = cv2.imread(image_file, cv2.IMREAD_COLOR)
 

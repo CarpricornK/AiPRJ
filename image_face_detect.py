@@ -1,7 +1,7 @@
 # 설치한 OpenCV 패키지 불러오기
 import cv2
 
-image = cv2.imread("image/my_face.jpg", cv2.IMREAD_COLOR)
+image = cv2.imread("image/face3.jpg", cv2.IMREAD_COLOR)
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -11,7 +11,7 @@ if image is None: raise Exception("이미지 읽기 실패")
 
 face_cascade = cv2.CascadeClassifier("data/haarcascade_frontalface_alt2.xml")
 
-faces = face_cascade.detectMultiScale(gray, 1.1, 5, 0, (100,100))
+faces = face_cascade.detectMultiScale(gray, 1.1, 1, 0, (100,100))
 
 facesCnt = len(faces)
 
